@@ -9,15 +9,23 @@ submissions.
 
 ```
 woodsman-site/
-├── index.html      # All page sections (hero, products, shutters, gallery, reviews, contact)
-├── styles.css      # Brand theme (navy + red, from the real logo), responsive layout
-├── script.js       # Mobile nav, gallery lightbox, scroll reveal, contact-form fetch
-├── server.js       # Express static server + POST /api/contact (Resend)
+├── index.html             # Home (hero, products, shutters, gallery, reviews, contact)
+├── shutters.html          # Service page: Plantation Shutters
+├── blinds.html            # Service page: Window Blinds
+├── motorized-shades.html  # Service page: Motorized Shades
+├── styles.css             # Brand theme (navy + red, from the real logo), responsive layout
+├── script.js              # Mobile nav, gallery lightbox, scroll reveal, contact-form fetch
+├── server.js              # Express static server + POST /api/contact (Resend)
+├── robots.txt / sitemap.xml
 ├── package.json
-├── .env            # Resend keys (gitignored) — copy from .env.example
+├── .env                   # Resend keys (gitignored) — copy from .env.example
 ├── .env.example
-└── images/         # Real photos + logo pulled from the live WoodsMan site
+└── images/                # Real photos + logo pulled from the live WoodsMan site
 ```
+
+Each service page mirrors the `authentic-blinds` layout: breadcrumb → hero →
+detail (image + feature list + CTAs) → "other window treatments" cards, with its
+own SEO metadata, Open Graph tags, and `Service` + `BreadcrumbList` JSON-LD.
 
 ## Real assets
 

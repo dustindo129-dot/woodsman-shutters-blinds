@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+ws_home.html
+ws_blinds.html
+ws_motor.html

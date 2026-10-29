@@ -135,9 +135,9 @@ a { color: inherit; text-decoration: none; }
 .trust-item span { font-size: .85rem; color: rgba(255,255,255,.75); }
 
 /* ===== Sections ===== */
-.section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.section { padding: clamp(2rem, 4.5vw, 3.75rem) 0; }
 .section-alt { background: var(--sand); }
-.section-head { text-align: center; max-width: 680px; margin: 0 auto 3rem; }
+.section-head { text-align: center; max-width: 680px; margin: 0 auto 2rem; }
 .section-lead { color: var(--muted); font-size: 1.05rem; margin-top: .8rem; }
 
 /* ===== Products ===== */

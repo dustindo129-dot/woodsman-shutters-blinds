@@ -122,10 +122,10 @@
         const data = await res.json().catch(function () { return {}; });
         if (!res.ok) throw new Error(data.error || "Something went wrong. Please try again.");
 
-        showNote("success", "Thanks! Your request was sent — we'll get back to you shortly. Prefer to talk now? Call (214) 413-9115.");
+        showNote("success", "Thanks! Your request was sent — we'll get back to you shortly. Prefer to talk now? Call 945-241-1155.");
         form.reset();
       } catch (err) {
-        showNote("error", err.message || "We couldn't send your message. Please call (214) 413-9115.");
+        showNote("error", err.message || "We couldn't send your message. Please call 945-241-1155.");
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;

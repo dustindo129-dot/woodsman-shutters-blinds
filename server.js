@@ -48,7 +48,7 @@ app.post('/api/contact', async (req, res) => {
   if (!RESEND_API_KEY) {
     console.error('Contact form: RESEND_API_KEY is not set.');
     return res.status(503).json({
-      error: 'The contact form is temporarily unavailable. Please call (214) 413-9115.',
+      error: 'The contact form is temporarily unavailable. Please call 945-241-1155.',
     });
   }
 
@@ -80,7 +80,7 @@ app.post('/api/contact', async (req, res) => {
   } catch (err) {
     console.error('Contact form: Resend error', err);
     return res.status(502).json({
-      error: 'We could not send your message. Please try again or call (214) 413-9115.',
+      error: 'We could not send your message. Please try again or call 945-241-1155.',
     });
   }
 

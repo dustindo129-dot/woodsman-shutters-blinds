@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
   const resend = new Resend(RESEND_API_KEY);
   const to   = CONTACT_TO  || 'woodsmanshuttersandblindsllc@gmail.com';
-  const from = RESEND_FROM || 'WoodsMan Website <onboarding@resend.dev>';
+  const from = RESEND_FROM || 'WoodsMan Website <noreply@woodsmanshuttersandblinds.com>';
 
   const html = `
     <h2>New website inquiry — WoodsMan Shutters &amp; Blinds</h2>
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
   const text = `New website inquiry — WoodsMan Shutters & Blinds\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || '-'}\nInterested in: ${service || '-'}\n\nMessage:\n${message || '-'}`;
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from,
       to,
       replyTo: email,
@@ -74,6 +74,12 @@ export default async function handler(req, res) {
       html,
       text,
     });
+    if (error) {
+      console.error('Contact form: Resend error', error);
+      return res.status(502).json({
+        error: 'We could not send your message. Please try again or call 945-241-1155.',
+      });
+    }
   } catch (err) {
     console.error('Contact form: Resend error', err);
     return res.status(502).json({

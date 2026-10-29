@@ -157,6 +157,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== Feature (Shutters) ===== */
 .feature { padding: clamp(3.5rem, 7vw, 6rem) 0; background: var(--cream); }
+.feature-dark { background: var(--forest-dark); padding: clamp(2rem, 4.5vw, 3.75rem) 0; }
+.feature-dark .feature-text h2 { color: #fff; }
+.feature-dark .feature-text p { color: rgba(255,255,255,.75); }
+.feature-dark .eyebrow { color: var(--wood-light); }
+.feature-dark .checklist li { color: rgba(255,255,255,.85); }
+.feature-dark .checklist li::before { background: var(--wood); }
 .feature-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 .feature-media { min-height: 460px; border-radius: var(--radius); background-size: cover; background-position: center; box-shadow: var(--shadow); }
 .feature-text p { color: var(--muted); margin-bottom: 1rem; }
@@ -235,12 +241,12 @@ a { color: inherit; text-decoration: none; }
 .section-dark { background: var(--forest-dark); color: #fff; }
 .section-dark h2 { color: #fff; }
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.contact-info p { color: rgba(255,255,255,.8); margin-bottom: 1.8rem; }
+.contact-info p { color: var(--muted); margin-bottom: 1.8rem; }
 .contact-list { list-style: none; display: grid; gap: 1.3rem; }
 .contact-list li { display: flex; flex-direction: column; gap: .2rem; }
-.contact-label { text-transform: uppercase; letter-spacing: .15em; font-size: .72rem; color: var(--wood-light); font-weight: 600; }
-.contact-list a { font-size: 1.05rem; color: #fff; transition: color .2s; }
-.contact-list a:hover { color: var(--wood-light); }
+.contact-label { text-transform: uppercase; letter-spacing: .15em; font-size: .72rem; color: var(--wood); font-weight: 600; }
+.contact-list a { font-size: 1.05rem; color: var(--forest); transition: color .2s; }
+.contact-list a:hover { color: var(--wood); }
 
 .contact-form { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); }
 .field { margin-bottom: 1.1rem; display: flex; flex-direction: column; gap: .4rem; }

@@ -219,6 +219,18 @@ a { color: inherit; text-decoration: none; }
 .review-card p { color: var(--ink); font-style: italic; }
 .review-card footer { color: var(--muted); font-weight: 600; font-size: .9rem; }
 
+/* ===== Policies ===== */
+.policies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.policy-card {
+  background: #fff; border-radius: var(--radius); padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.05);
+}
+.policy-card h3 { font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--forest); margin-bottom: .75rem; }
+.policy-card p { color: var(--muted); line-height: 1.7; font-size: .95rem; }
+
+/* ===== Footer Social ===== */
+.footer-social { display: inline-flex; align-items: center; gap: .35rem; }
+
 /* ===== Contact ===== */
 .section-dark { background: var(--forest-dark); color: #fff; }
 .section-dark h2 { color: #fff; }
@@ -346,6 +358,7 @@ a { color: inherit; text-decoration: none; }
   .pricing-body, .pricing-card:nth-child(even) .pricing-body { padding: 1.5rem; }
   .pricing-img { min-height: 240px; }
   .feature-inner, .contact-inner, .office-grid { grid-template-columns: 1fr; }
+  .policies-grid { grid-template-columns: repeat(2, 1fr); }
   .office-map, .office-map iframe { min-height: 320px; }
   .feature-media { min-height: 300px; order: -1; }
   .footer-inner { grid-template-columns: 1fr 1fr; }

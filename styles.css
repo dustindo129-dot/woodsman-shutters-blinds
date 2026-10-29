@@ -317,6 +317,12 @@ a { color: inherit; text-decoration: none; }
 .filter-btn:hover { border-color: var(--wood); color: var(--wood); }
 .filter-btn.is-active { background: var(--forest); border-color: var(--forest); color: #fff; }
 .gallery-item.is-hidden { display: none; }
+.gallery-video {
+  background: #000; display: flex; align-items: center; justify-content: center;
+}
+.gallery-video iframe {
+  width: 100%; height: 100%; border: 0; border-radius: var(--radius);
+}
 
 /* ===== Store / Office + map ===== */
 .office-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2.5rem; align-items: stretch; }

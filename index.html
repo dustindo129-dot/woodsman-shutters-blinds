@@ -182,33 +182,62 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section class="feature" id="about">
-    <div class="container feature-inner">
-      <div class="feature-media" style="background-image:url('images/feature.jpg')"></div>
-      <div class="feature-text">
-        <p class="eyebrow">About WoodsMan</p>
-        <h2>Your local window-treatment factory</h2>
-        <p>
-          WoodsMan Shutters and Blinds is a Garland, TX factory that designs,
-          builds, and installs custom window treatments. Because everything is
-          fabricated in-house, we control quality from the first cut to the final
-          finish — and pass the savings and speed on to you.
-        </p>
-        <p>
-          From handcrafted plantation shutters to smart motorization, we help
-          homeowners, builders, and designers across the DFW Metroplex find the
-          perfect fit for every window — with honest pricing and craftsmanship
-          that lasts.
-        </p>
-        <ul class="checklist">
-          <li>Locally manufactured in Garland, TX</li>
-          <li>Measured, built &amp; installed by our own team</li>
-          <li>Free in-home consultations</li>
-          <li>Guaranteed quality &amp; honest pricing</li>
+  <!-- Contact / Free Consultation -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <p class="eyebrow light">Free Consultation</p>
+        <h2>Request your free consultation</h2>
+        <p>Tell us about your windows and we'll put together a no-obligation estimate for custom shutters, blinds, shades, or motorization.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Address</span>
+            <a href="https://maps.google.com/?q=130+Castle+Dr+%23101,+Garland,+TX+75040" target="_blank" rel="noopener">130 Castle Dr #101, Garland, TX 75040</a>
+          </li>
+          <li>
+            <span class="contact-label">Phone</span>
+            <a href="tel:+19452411155">945-241-1155</a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:woodsmanshuttersandblindsllc@gmail.com">woodsmanshuttersandblindsllc@gmail.com</a>
+          </li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
       </div>
+
+      <form class="contact-form" id="quoteForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="service">I'm interested in</label>
+          <select id="service" name="service">
+            <option>Shutters</option>
+            <option>Blinds</option>
+            <option>Shades</option>
+            <option>Motorization</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" rows="4" placeholder="How many windows, rooms, timeline…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Send Request</button>
+        <p class="form-note" id="formNote" hidden></p>
+      </form>
     </div>
   </section>
 
@@ -593,62 +622,33 @@
     </div>
   </section>
 
-  <!-- Contact / Free Consultation -->
-  <section class="section section-dark" id="contact">
-    <div class="container contact-inner">
-      <div class="contact-info">
-        <p class="eyebrow light">Free Consultation</p>
-        <h2>Request your free consultation</h2>
-        <p>Tell us about your windows and we'll put together a no-obligation estimate for custom shutters, blinds, shades, or motorization.</p>
-
-        <ul class="contact-list">
-          <li>
-            <span class="contact-label">Address</span>
-            <a href="https://maps.google.com/?q=130+Castle+Dr+%23101,+Garland,+TX+75040" target="_blank" rel="noopener">130 Castle Dr #101, Garland, TX 75040</a>
-          </li>
-          <li>
-            <span class="contact-label">Phone</span>
-            <a href="tel:+19452411155">945-241-1155</a>
-          </li>
-          <li>
-            <span class="contact-label">Email</span>
-            <a href="mailto:woodsmanshuttersandblindsllc@gmail.com">woodsmanshuttersandblindsllc@gmail.com</a>
-          </li>
+  <!-- About -->
+  <section class="feature" id="about">
+    <div class="container feature-inner">
+      <div class="feature-media" style="background-image:url('images/feature.jpg')"></div>
+      <div class="feature-text">
+        <p class="eyebrow">About WoodsMan</p>
+        <h2>Your local window-treatment factory</h2>
+        <p>
+          WoodsMan Shutters and Blinds is a Garland, TX factory that designs,
+          builds, and installs custom window treatments. Because everything is
+          fabricated in-house, we control quality from the first cut to the final
+          finish — and pass the savings and speed on to you.
+        </p>
+        <p>
+          From handcrafted plantation shutters to smart motorization, we help
+          homeowners, builders, and designers across the DFW Metroplex find the
+          perfect fit for every window — with honest pricing and craftsmanship
+          that lasts.
+        </p>
+        <ul class="checklist">
+          <li>Locally manufactured in Garland, TX</li>
+          <li>Measured, built &amp; installed by our own team</li>
+          <li>Free in-home consultations</li>
+          <li>Guaranteed quality &amp; honest pricing</li>
         </ul>
+        <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
       </div>
-
-      <form class="contact-form" id="quoteForm" novalidate>
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your name" />
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@email.com" />
-          </div>
-        </div>
-        <div class="field">
-          <label for="service">I'm interested in</label>
-          <select id="service" name="service">
-            <option>Shutters</option>
-            <option>Blinds</option>
-            <option>Shades</option>
-            <option>Motorization</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Project details</label>
-          <textarea id="message" name="message" rows="4" placeholder="How many windows, rooms, timeline…"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Send Request</button>
-        <p class="form-note" id="formNote" hidden></p>
-      </form>
     </div>
   </section>
 

@@ -62,6 +62,23 @@
     if (e.key === "Escape") closeLightbox();
   });
 
+  // Gallery category filtering
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  if (filterBtns.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const filter = btn.getAttribute("data-filter");
+        filterBtns.forEach(function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        galleryItems.forEach(function (item) {
+          const match = filter === "all" || item.getAttribute("data-cat") === filter;
+          item.classList.toggle("is-hidden", !match);
+        });
+      });
+    });
+  }
+
   // Contact form -> Resend-backed API (/api/contact)
   const form = document.getElementById("quoteForm");
   const note = document.getElementById("formNote");

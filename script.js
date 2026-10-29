@@ -47,7 +47,7 @@
     lightbox.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
   };
-  document.querySelectorAll(".gallery-item").forEach(function (item) {
+  document.querySelectorAll(".gallery-item:not(.gallery-video)").forEach(function (item) {
     item.addEventListener("click", function () {
       openLightbox(item.getAttribute("data-full"));
     });

@@ -62,19 +62,42 @@
     if (e.key === "Escape") closeLightbox();
   });
 
-  // Gallery category filtering
+  // All mixes the photos. A single category keeps its original order.
+  const galleryGrid = document.getElementById("galleryGrid");
   const filterBtns = document.querySelectorAll(".filter-btn");
   const galleryItems = document.querySelectorAll(".gallery-item");
+  const originalOrder = Array.prototype.slice.call(galleryItems);
+
+  const shuffleItems = function (list) {
+    const items = list.slice();
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const swap = items[i];
+      items[i] = items[j];
+      items[j] = swap;
+    }
+    return items;
+  };
+
+  const showGallery = function (filter) {
+    if (!galleryGrid) return;
+    const order = filter === "all" ? shuffleItems(originalOrder) : originalOrder;
+    order.forEach(function (item) {
+      galleryGrid.appendChild(item);
+      const match = filter === "all" || item.getAttribute("data-cat") === filter;
+      item.classList.toggle("is-hidden", !match);
+    });
+  };
+
+  if (galleryGrid && originalOrder.length) showGallery("all");
+
   if (filterBtns.length) {
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         const filter = btn.getAttribute("data-filter");
         filterBtns.forEach(function (b) { b.classList.remove("is-active"); });
         btn.classList.add("is-active");
-        galleryItems.forEach(function (item) {
-          const match = filter === "all" || item.getAttribute("data-cat") === filter;
-          item.classList.toggle("is-hidden", !match);
-        });
+        showGallery(filter);
       });
     });
   }

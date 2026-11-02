@@ -306,8 +306,8 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(2, 1fr);
   max-width: 780px; margin-left: auto; margin-right: auto;
 }
-.product-grid--4 { grid-template-columns: repeat(4, 1fr); }
-.product-grid--4 .product-media { height: 190px; }
+.product-grid--6 { grid-template-columns: repeat(3, 1fr); }
+.product-grid--6 .product-media { height: 190px; }
 
 /* ===== Gallery filters ===== */
 .gallery-filters {
